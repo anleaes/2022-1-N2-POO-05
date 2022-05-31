@@ -1,0 +1,65 @@
+@startuml
+
+title Matrícula de Universidade
+
+
+class Aluno{
+    - nome: String
+    - data_nascimento: date
+    - endereco: String
+    - matricula: Matricula 
+
+}
+
+class Turma{
+    - ano: int
+    - semestre: int
+    - dia_semana: String
+    - horario: String
+
+}
+
+class Professor{
+    - nome: String
+    - matricula: Matricula
+}
+
+class Curso{
+    - nome: String  
+    - area: String
+    - formacao: String
+    - modalidade: String
+    - duracao: String
+    - 
+
+}
+
+class Disciplina{
+    - nome: String
+    - carga_horaria: Float
+    - turno: String
+    - modalidade_disciplina: String
+    - professor: Professor
+    - curso: Curso
+    - descricao: String
+
+}
+
+class Secretaria{
+
+
+
+}
+
+class Matricula{
+    - : String
+    - tipo
+
+}
+
+class Funcionario{
+    nome: String
+
+}
+
+@enduml
