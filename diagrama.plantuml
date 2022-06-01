@@ -30,8 +30,7 @@ class Curso{
     - formacao: String
     - modalidade: String
     - duracao: String
-    - 
-
+    - professor: Professor
 }
 
 class Disciplina{
@@ -39,9 +38,9 @@ class Disciplina{
     - carga_horaria: Float
     - turno: String
     - modalidade_disciplina: String
+    - descricao: String
     - professor: Professor
     - curso: Curso
-    - descricao: String
 
 }
 
