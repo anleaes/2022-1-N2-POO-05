@@ -9,7 +9,8 @@ class Aluno{
     - data_nascimento: date
     - endereco: String
     - turma: Turma
-    + construtor (nome, matricula, turma)
+    - curso: Curso
+    + construtor (nome, matricula, data_nascimento, endereco, turma)
 }
 
 class Turma{
@@ -22,7 +23,7 @@ class Turma{
     - professor: Professor
     - aluno: Aluno
     - campus: Campus
-    + construtor (codigo_turma, professor, aluno, campus)
+    + construtor (codigo_turma, ano, semestre, dia_semana, horario, sala, professor, aluno, campus)
 }
 
 class Professor{
@@ -31,18 +32,18 @@ class Professor{
     - data_nascimento: date
     - carga_horaria_semanal: int
     - turma: Turma
-    + construtor (nome, matricula, turma)
+    + construtor (nome, matricula, data_nascimento, carga_horaria_semanal, turma)
 }
 
 class Curso{
     - nome: String  
-    - area: String
     - codigo_curso: int
     - formacao: String
     - modalidade: String
     - duracao: String
     - professor: Professor
-    + construtor (nome, codigo_curso, professor)
+    - area: Area
+    + construtor (nome, codigo_curso, formacao, modalidade, duracao, professor, area)
 }
 
 class Disciplina{
@@ -54,7 +55,7 @@ class Disciplina{
     - descricao: String
     - professor: Professor
     - curso: Curso
-    + construtor (nome, codigo_disciplina, professor, curso)
+    + construtor (nome, codigo_disciplina, carga_horaria, turno, modalidade_disciplina, descricao, professor, curso)
 }
 
 class Coordenador{
@@ -69,7 +70,8 @@ class Matricula{
     - codigo_matricula: int
     - tipo: String
     - data: date
-    + construtor (codigo_matricula)
+    - aluno: aluno
+    + construtor (codigo_matricula, tipo, data, aluno)
 }
 
 class Funcionario{
@@ -84,7 +86,7 @@ class Area{
     - descricao: String
     - codigo_area: int
     - curso: Curso
-    + construtor (nome, codigo_area, curso)
+    + construtor (nome, descricao, codigo_area, curso)
 }
 
 class Campus{
@@ -92,7 +94,7 @@ class Campus{
     - endereco: String
     - codigo_campus: int
     - reitor: String
-    + construtor (nome, codigo_campus)
+    + construtor (nome, endereco, codigo_campus, reitor)
 }
 
 Turma <|-- Aluno
