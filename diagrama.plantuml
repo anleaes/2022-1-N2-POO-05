@@ -8,10 +8,12 @@ class Aluno{
     - matricula: Matricula 
     - data_nascimento: date
     - endereco: String
-
+    - turma: Turma
+    + construtor (nome, matricula, turma)
 }
 
 class Turma{
+    - codigo_turma: String
     - ano: int
     - semestre: int
     - dia_semana: String
@@ -19,7 +21,8 @@ class Turma{
     - sala: String
     - professor: Professor
     - aluno: Aluno
-
+    - campus: Campus
+    + construtor (codigo_turma, professor, aluno, campus)
 }
 
 class Professor{
@@ -27,45 +30,78 @@ class Professor{
     - matricula: Matricula
     - data_nascimento: date
     - carga_horaria_semanal: int
+    - turma: Turma
+    + construtor (nome, matricula, turma)
 }
 
 class Curso{
     - nome: String  
     - area: String
+    - codigo_curso: int
     - formacao: String
     - modalidade: String
     - duracao: String
     - professor: Professor
+    + construtor (nome, codigo_curso, professor)
 }
 
 class Disciplina{
     - nome: String
+    - codigo_disciplina: int
     - carga_horaria: Float
     - turno: String
     - modalidade_disciplina: String
     - descricao: String
     - professor: Professor
     - curso: Curso
-
+    + construtor (nome, codigo_disciplina, professor, curso)
 }
 
 class Coordenador{
-    
-
-
+    - nome: String
+    - matricula: Matricula
+    - area: Area
+    - campus: Campus
+    + construtor (nome, matricula, area, campus)
 }
 
 class Matricula{
-    - : String
+    - codigo_matricula: int
     - tipo: String
-
+    - data: date
+    + construtor (codigo_matricula)
 }
 
 class Funcionario{
     - nome: String
     - cargo: String
-
-
+    - matricula: Matricula
+    + construtor (nome, cargo, matricula)
 }
+
+class Area{
+    - nome: String
+    - descricao: String
+    - codigo_area: int
+    - curso: Curso
+    + construtor (nome, codigo_area, curso)
+}
+
+class Campus{
+    - nome: String
+    - endereco: String
+    - codigo_campus: int
+    - reitor: String
+    + construtor (nome, codigo_campus)
+}
+
+Turma <|-- Aluno
+Turma <|-- Professor
+Disciplina <|-- Turma
+Funcionario <|-- Professor
+Funcionario <|-- Coordenador
+Campus <|-- Coordenador
+Area <|-- Disciplina
+Curso <|-- Disciplina
 
 @enduml
