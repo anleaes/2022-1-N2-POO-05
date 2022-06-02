@@ -5,9 +5,9 @@ title Matrícula de Universidade
 
 class Aluno{
     - nome: String
+    - matricula: Matricula 
     - data_nascimento: date
     - endereco: String
-    - matricula: Matricula 
 
 }
 
@@ -16,12 +16,17 @@ class Turma{
     - semestre: int
     - dia_semana: String
     - horario: String
+    - sala: String
+    - professor: Professor
+    - aluno: Aluno
 
 }
 
 class Professor{
     - nome: String
     - matricula: Matricula
+    - data_nascimento: date
+    - carga_horaria_semanal: int
 }
 
 class Curso{
@@ -44,20 +49,22 @@ class Disciplina{
 
 }
 
-class Secretaria{
-
+class Coordenador{
+    
 
 
 }
 
 class Matricula{
     - : String
-    - tipo
+    - tipo: String
 
 }
 
 class Funcionario{
-    nome: String
+    - nome: String
+    - cargo: String
+
 
 }
 
