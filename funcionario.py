@@ -1,6 +1,7 @@
 class Funcionario:
     
-    def __init__(self,nome,cargo,matricula):
+    def __init__(self,nome,cpf,telefone,email):
         self._nome = nome
-        self._cargo = cargo
-        self._matricula = matricula
+        self._cpf = cpf
+        self._telefone = telefone
+        self._email = email

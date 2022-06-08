@@ -2,15 +2,38 @@
 
 title Matrícula de Universidade
 
-
 class Aluno{
     - nome: String
-    - matricula: Matricula 
+    - cpf: Integer
+    - telefone: Integer
     - data_nascimento: date
     - endereco: String
-    - turma: Turma
-    - curso: Curso
-    + construtor (nome, matricula, data_nascimento, endereco, turma)
+    + construtor (nome, matricula, data_nascimento, endereco)
+}
+
+class Funcionario{
+    - nome: String
+    - cpf: Integer
+    - telefone: Telefone
+    - email: String
+    + construtor (nome, cpf, telefone, email)
+}
+
+class Professor{
+    - graducao: String
+    - salario: Integer
+    - carga_horaria_semanal: int
+    + construtor (graduacao, carga_horaria_semanal)
+}
+
+class Coordenador{
+    - salario: Integer
+    + construtor (salario)
+}
+
+class Reitor{
+    -salario: Integer
+    + construtor (salario)
 }
 
 class Turma{
@@ -22,17 +45,30 @@ class Turma{
     - sala: String
     - professor: Professor
     - aluno: Aluno
-    - campus: Campus
-    + construtor (codigo_turma, ano, semestre, dia_semana, horario, sala, professor, aluno, campus)
+    - disciplina: Disciplina
+    + construtor (codigo_turma, ano, semestre, dia_semana, horario, sala, professor, aluno, disciplina)
 }
 
-class Professor{
+class Matricula{
+    - codigo_matricula: int
+    - tipo: String
+    - data: date
+    - aluno: aluno
+    - disciplina: disciplina
+    + construtor (codigo_matricula, tipo, data, aluno,disciplina)
+}
+
+
+class Disciplina{
     - nome: String
-    - matricula: Matricula
-    - data_nascimento: date
-    - carga_horaria_semanal: int
-    - turma: Turma
-    + construtor (nome, matricula, data_nascimento, carga_horaria_semanal, turma)
+    - semestre: String
+    - codigo_disciplina: int
+    - carga_horaria: Float
+    - turno: String
+    - modalidade_disciplina: String
+    - descricao: String
+    - curso: Curso
+    + construtor (nome, codigo_disciplina, carga_horaria, turno, modalidade_disciplina, descricao, curso)
 }
 
 class Curso{
@@ -41,52 +77,16 @@ class Curso{
     - formacao: String
     - modalidade: String
     - duracao: String
-    - professor: Professor
     - area: Area
-    + construtor (nome, codigo_curso, formacao, modalidade, duracao, professor, area)
-}
-
-class Disciplina{
-    - nome: String
-    - codigo_disciplina: int
-    - carga_horaria: Float
-    - turno: String
-    - modalidade_disciplina: String
-    - descricao: String
-    - professor: Professor
-    - curso: Curso
-    + construtor (nome, codigo_disciplina, carga_horaria, turno, modalidade_disciplina, descricao, professor, curso)
-}
-
-class Coordenador{
-    - nome: String
-    - matricula: Matricula
-    - area: Area
-    - campus: Campus
-    + construtor (nome, matricula, area, campus)
-}
-
-class Matricula{
-    - codigo_matricula: int
-    - tipo: String
-    - data: date
-    - aluno: aluno
-    + construtor (codigo_matricula, tipo, data, aluno)
-}
-
-class Funcionario{
-    - nome: String
-    - cargo: String
-    - matricula: Matricula
-    + construtor (nome, cargo, matricula)
+    + construtor (nome, codigo_curso, formacao, modalidade, duracao, area)
 }
 
 class Area{
     - nome: String
     - descricao: String
     - codigo_area: int
-    - curso: Curso
-    + construtor (nome, descricao, codigo_area, curso)
+    - coordenador: Coordenador
+    + construtor (nome, descricao, codigo_area, coordenador)
 }
 
 class Campus{
@@ -97,13 +97,17 @@ class Campus{
     + construtor (nome, endereco, codigo_campus, reitor)
 }
 
-Turma <|-- Aluno
-Turma <|-- Professor
-Disciplina <|-- Turma
 Funcionario <|-- Professor
 Funcionario <|-- Coordenador
-Campus <|-- Coordenador
-Area <|-- Disciplina
-Curso <|-- Disciplina
+Funcionario <|-- Reitor
+Turma *-- Aluno
+Turma *-- Professor
+Turma *---up Disciplina
+Campus *-- Reitor
+Disciplina *-- Curso
+Curso *-- Area
+Area *--- Coordenador
+Matricula *-- Aluno
+Matricula *-- Disciplina
 
 @enduml
