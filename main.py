@@ -10,3 +10,5 @@ from professor import Professor
 from reitor import Reitor
 from turma import Turma
 
+print("Sistema de Matrícula de faculdade")
+
