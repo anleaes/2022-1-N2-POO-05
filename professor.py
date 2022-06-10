@@ -8,7 +8,7 @@ class Professor(Funcionario):
         self._salario = salario
         self._carga_horaria_semanal = carga_horaria_semanal
 
-     @property
+    @property
     def get_nome(self):
         return self._nome
     
