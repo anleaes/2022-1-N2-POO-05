@@ -23,16 +23,20 @@ class Professor{
     - graducao: String
     - salario: Integer
     - carga_horaria_semanal: int
+    - numero_de_disciplinas_lecionadas: int
     + construtor (graduacao, carga_horaria_semanal)
 }
 
 class Coordenador{
+    - formacao: String
     - salario: Integer
+    - numero_de_cursos_coordenados: Integer
     + construtor (salario)
 }
 
 class Reitor{
-    -salario: Integer
+    - salario: Integer
+    - numero_de_campus_administrados: Integer
     + construtor (salario)
 }
 
