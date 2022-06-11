@@ -7,5 +7,5 @@ class Aluno:
         self._data_nascimento = data_nascimento
         self._endereco = endereco
 
-
-    
+    def mostrar_nome(self):
+        print(self._nome)
