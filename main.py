@@ -10,7 +10,7 @@ from professor import Professor
 from reitor import Reitor
 from turma import Turma
 
-print("Sistema de Matrícula de faculdade")
+print("Sistema de Matricula de faculdade")
 
 
 aluno1 = Aluno("Fulano de Tal", 12345678910, "(51) 99999-8888", "12/06/2000", "Rua tal, número 1")
