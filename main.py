@@ -12,8 +12,6 @@ from turma import Turma
 
 print("Sistema de Matrícula de faculdade")
 
-def mostrar_aluno(self):
-    print("O aluno de nome ", {self._aluno_nome}, "tem o seguinte cpf ", {self._aluno_cpf}, "seu telefone é ", {self._aluno_telefone}, "nascido em ", {self._aluno_data_nascimento}, "e reside no endereço:", {self._aluno_endereco})
 
 aluno1 = Aluno("Fulano de Tal", 12345678910, "(51) 99999-9999", "12/06/2000", "Rua tal, número 1")
 coordenador1 = Coordenador("Vanderlei Luxemburgo",  90909090909, "rua avenida, numero 10", "(51) 90909-0909", "Doutorado", "10,000", 3)
@@ -26,4 +24,8 @@ reitor1 = Reitor("Reitor Ciclano", 88884444222, "Rua do canto, 123", "(51) 70707
 turma1 = Turma("TI-1", 2022, 1, "Quarta-Feira", "19:10", "505A", professor1, aluno1, disciplina1)
 campus1 = Campus("Campus FAPA","Manoel Elias, 2000", 1, reitor1)
 curso1 = Curso("Analise de Sistemas", 12, "Superior tecnologico", "Presencial", "2,5 anos", professor1, area1)
+
+def mostrar_aluno(self):
+    print("O aluno de nome ", {self._aluno_nome}, "tem o seguinte cpf ", {self._aluno_cpf}, "seu telefone é ", {self._aluno_telefone}, "nascido em ", {self._aluno_data_nascimento}, "e reside no endereço:", {self._aluno_endereco})
+
 
