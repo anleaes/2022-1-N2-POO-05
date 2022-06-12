@@ -21,7 +21,7 @@ funcionario1 = Funcionario("Fulaninho de tal", 90909090908, "(51) 50505-5050", "
 matricula1 = Matricula(1, "graduação", "12/02/2022", aluno1, disciplina1)
 professor1 = Professor("Professor fulano", 12544512346, "Rua tal, 123", "(51) 90909-9090", "Mestrado", 5000, 40, 10 )
 reitor1 = Reitor("Reitor Ciclano", 88884444222, "Rua do canto, 123", "(51) 70707-7070", 15000, 1)
-turma1 = Turma("TI-1", 2022, 1, "Quarta-Feira", "19:10", "505A", professor1, aluno1, disciplina1)
+turma1 = Turma("TI-1", "Segunda-Feira", "19:10", "505A", professor1, aluno1, disciplina1)
 campus1 = Campus("Campus FAPA","Manoel Elias, 2000", 1, reitor1)
 curso1 = Curso("Analise de Sistemas", 12, "Superior tecnologico", "Presencial", "2,5 anos", professor1, area1)
 
