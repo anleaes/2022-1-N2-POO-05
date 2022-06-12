@@ -13,7 +13,7 @@ from turma import Turma
 print("Sistema de Matrícula de faculdade")
 
 def mostrar_aluno(self):
-    print("O aluno de nome ",{self._aluno_nome},"tem o seguinte cpf",{self._aluno_cpf},"seu telefone é",{self._aluno_telefone},"nascido em",{self._aluno_data_nascimento},"e reside no endereço:",{self._aluno_endereco})
+    print("O aluno de nome ", {self._aluno_nome}, "tem o seguinte cpf ", {self._aluno_cpf}, "seu telefone é ", {self._aluno_telefone}, "nascido em ", {self._aluno_data_nascimento}, "e reside no endereço:", {self._aluno_endereco})
 
 aluno1 = Aluno("Fulano de Tal", 12345678910, "(51) 99999-9999", "12/06/2000", "Rua tal, número 1")
 campus1 = Campus()
