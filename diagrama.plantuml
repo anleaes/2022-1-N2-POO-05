@@ -14,7 +14,7 @@ class Aluno{
 class Funcionario{
     - nome: String
     - cpf: Integer
-    - telefone: Telefone
+    - telefone: String
     - email: String
     + construtor (nome, cpf, telefone, email)
 }
