@@ -13,7 +13,7 @@ from turma import Turma
 print("Sistema de Matrícula de faculdade")
 
 
-aluno1 = Aluno("Fulano de Tal", 12345678910, "(51) 99999-9999", "12/06/2000", "Rua tal, número 1")
+aluno1 = Aluno("Fulano de Tal", 12345678910, "(51) 99999-8888", "12/06/2000", "Rua tal, número 1")
 coordenador1 = Coordenador("Vanderlei Luxemburgo",  90909090909, "rua avenida, numero 10", "(51) 90909-0909", "Doutorado", "10,000", 3)
 area1 = Area("Tecnologia", "Area dos cursos de Tecnologia da Informação", 1, coordenador1)
 disciplina1 = Disciplina("Programação Orientada a Objetos", "2022/1", 5, 94.6, "Noite", "Presencial", "Disciplina de POO", "TI")
