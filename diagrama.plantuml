@@ -72,6 +72,7 @@ class Disciplina{
     - modalidade_disciplina: String
     - descricao: String
     - curso: Curso
+    - professor: Curso
     + construtor (nome, codigo_disciplina, carga_horaria, turno, modalidade_disciplina, descricao, curso)
 }
 
