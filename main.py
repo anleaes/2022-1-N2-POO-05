@@ -34,22 +34,6 @@ turma1 = Turma("TI-1", "Segunda-Feira", "19:10", "505A", professor1, aluno1, dis
 
 
 
-<<<<<<< HEAD
-def mostrar_matricula(self):
-     print("A matricula de código", {self._matricula._codigo_matricula}, "de tipo ", {self._matricula._tipo}, "feita na data", {self._matricula._data}, "é do aluno", {self._matricula._aluno._nome}, "na disciplina", {self._matricula._disciplina._nome})
-
-def mostrar_campus(self):
-    print("Campus:", {self._campus._nome}, "Endereço:", {self._campus._endereco})
-
-def mostrar_disciplina(self):
-     print("A disiciplina de nome",{self._disciplina._nome},"pertence ao semestre",{self._disciplina._semestre},"tem carga horária de",{self._disciplina._carga_horaria},"do turno",{self._disciplina._turno},"e modalidade",{self._disciplina._modalidade},"pertence ao curso",{self._disciplina._curso},"é lecionada pelo professor",{self._disciplina._professor})
-
-def mostrar_turma(self):
-     print("A Turma",{self._turma._codigo_turma},"tem aula na",{self._turma._dia_semana},"tem carga horária de",{self._turma._horario},"do turno",{self._turma._sala},"e modalidade",{self._turma._professor},"pertence ao curso",{self._turma._aluno},"é lecionada pelo professor",{self.turma._disciplina})
-
-def mostrar_area(self):
-    print("A Área",{self._area._nome},"descrição:",{self._area._descricao},"tem o coordenador",{self._turma._coordenador._nome})
-=======
 print("Sistema de Matricula de Faculdade")
 
 print(f'O aluno de nome {aluno1._nome} tem o seguinte cpf {aluno1._cpf}, seu telefone é: {aluno1._telefone}, nascido em {aluno1._data_nascimento}, e reside no endereço: {aluno1._endereco}')
@@ -62,7 +46,10 @@ alunoData_nasc = input("Digite a data de nascimento do aluno: ")
 alunoEndereco = input("Digite o endereço do aluno: ")
 
 print(f'O aluno de nome {alunoNome} tem o seguinte cpf {alunoCpf}, seu telefone é: {alunoTelefone}, nascido em  {alunoData_nasc}, e reside no endereço: {alunoEndereco}')
->>>>>>> bd7d635c9cc8caf0e1fd02375abffd355137b59b
 
+def mostrar_aluno(self):
+    print("O aluno de nome ", {self._aluno._nome}, "tem o seguinte cpf ", {self._aluno._cpf}, "seu telefone é ", {self._aluno._telefone}, "nascido em ", {self._aluno._data_nascimento}, "e reside no endereço:", {self._aluno._endereco})
 
+def mostrar_curso(self):
+    print("O Curso de ", {self._curso._nome}, "de código ", {self._curso._código_curso}, "e tipo de formação é", {self._curso._formacao}, ".Esse curso é na modalidade", {self._curso._modalidade}, "com duração de", {self._curso._duracao},"faz parte da área",{self._curso._area})
 
