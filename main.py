@@ -52,5 +52,8 @@ def mostrar_disciplina(self):
 def mostrar_turma(self):
      print("A Turma",{self._turma._codigo_turma},"tem aula na",{self._turma._dia_semana},"tem carga horária de",{self._turma._horario},"do turno",{self._turma._sala},"e modalidade",{self._turma._professor},"pertence ao curso",{self._turma._aluno},"é lecionada pelo professor",{self.turma._disciplina})
 
+def mostrar_area(self):
+    print("A Área",{self._area._nome},"descrição:",{self._area._descricao},"tem o coordenador",{self._turma._coordenador._nome})
+
 
 
