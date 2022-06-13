@@ -39,3 +39,6 @@ def mostrar_aluno(self):
 
 def mostrar_curso(self):
     print("O Curso de ", {self._curso._nome}, "de código ", {self._curso._código_curso}, "e tipo de formação é", {self._curso._formacao}, ".Esse curso é na modalidade", {self._curso._modalidade}, "com duração de", {self._curso._duracao},"faz parte da área",{self._curso._area})
+
+def mostrar_matricula(self):
+     print("A matricula de código", {self._matricula._codigo_matricula}, "de tipo ", {self._matricula._tipo}, "feita na data", {self._matricula._data}, "é do aluno", {self._matricula._aluno._nome}, "na disciplina", {self._matricula._disciplina._nome})
