@@ -46,4 +46,8 @@ def mostrar_matricula(self):
 def mostrar_campus(self):
     print("Campus:", {self._campus._nome}, "Endereço:", {self._campus._endereco})
 
+def mostrar_disciplina(self):
+     print("A disiciplina de nome",{self._disciplina._nome},"pertence ao semestre",{self._disciplina._semestre},"tem carga horária de",{self._disciplina._carga_horaria},"do turno",{self._disciplina._turno},"e modalidade",{self._disciplina._modalidade},"pertence ao curso",{self._disciplina._curso},"é lecionada pelo professor",{self._disciplina._professor})
+
+
 
