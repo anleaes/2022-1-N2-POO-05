@@ -32,9 +32,11 @@ matricula1 = Matricula(1, "graduação", "12/02/2022", aluno1, disciplina1)
 
 turma1 = Turma("TI-1", "Segunda-Feira", "19:10", "505A", professor1, aluno1, disciplina1)
 
+
+
 print("Sistema de Matricula de Faculdade")
 
-print(f'O aluno de nome  {aluno1._nome} tem o seguinte cpf {aluno1._cpf}, seu telefone é: {aluno1._telefone}, nascido em {aluno1._data_nascimento}, e reside no endereço: {aluno1._endereco}')
+print(f'O aluno de nome {aluno1._nome} tem o seguinte cpf {aluno1._cpf}, seu telefone é: {aluno1._telefone}, nascido em {aluno1._data_nascimento}, e reside no endereço: {aluno1._endereco}')
 
 
 alunoNome = input("Digite o nome do aluno: ")
